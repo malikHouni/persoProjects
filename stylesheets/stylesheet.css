@@ -57,7 +57,9 @@ a {
   color: #fff;
   text-align: center;
   background-color: #159957;
-  background-image: linear-gradient(120deg, #155799, #159957); }
+  /*background-image: linear-gradient(120deg, #155799, #159957);*/ 
+  background-image: url('https://static.pexels.com/photos/24217/pexels-photo-24217.jpg') }
+}
 
 @media screen and (min-width: 64em) {
   .page-header {
