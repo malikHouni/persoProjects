@@ -8,12 +8,30 @@
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="../stylesheets/stylesheet.css" media="screen">
     <link rel="stylesheet" type="text/css" href="../stylesheets/github-light.css" media="screen">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-rc1/jquery.min.js"></script>
     <style>
       #datasciencebox a{color:#F2F2F2;}
       #datasciencebox{
         background-color:#81BEF7;width:100%;height:auto;padding:3em;
+        text-align:center;
       }
     </style>
+    <script>
+    $(function(){
+      console.log("page-header:",$('.page-header').width())
+      var pageheaderW=$('.page-header').width();
+      var datascienceboxW=$('#datasciencebox').width();
+      var allPageW=$(window).width();
+      var datascienceboxMarginLeft=$('#datasciencebox').position().left;
+      var datascienceboxMarginRight=pageheaderW- datascienceboxW- datascienceboxMarginLeft;
+      $('#datasciencebox').css({'margin-left':'-'+datascienceboxMarginLeft+'px'});
+      $('#datasciencebox').width($('.main-content').width()+datascienceboxMarginRight)     
+      //console.log("datasciencebox:",datascienceboxW)
+      //console.log("all window",allPageW)
+      //console.log("margin needed",datascienceboxMarginLeft)
+      //console.log("pos",$('#datasciencebox').position().left)
+    })
+    </script>
   </head>
   <body>
     <section class="page-header">
@@ -47,7 +65,7 @@
 
     </section>
 
-  <script>
+<script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
