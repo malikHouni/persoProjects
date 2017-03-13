@@ -18,6 +18,7 @@
     </style>
     <script>
     $(function(){
+      if(screen && screen.width > 480){
       console.log("page-header:",$('.page-header').width())
       var pageheaderW=$('.page-header').width();
       var datascienceboxW=$('#datasciencebox').width();
@@ -30,6 +31,7 @@
       //console.log("all window",allPageW)
       //console.log("margin needed",datascienceboxMarginLeft)
       //console.log("pos",$('#datasciencebox').position().left)
+      }
     })
     </script>
   </head>
