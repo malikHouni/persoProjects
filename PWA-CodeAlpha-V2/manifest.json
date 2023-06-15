@@ -24,8 +24,7 @@
     }, {
       "src": "https://malikhouni.github.io/persoProjects/PWA-CodeAlpha-V2/images/Icon-512.png",
       "sizes": "512x512",
-      "type": "image/png",
-	  "purpose": "any maskable"
+      "type": "image/png"
     }],
   "lang": "en-US",
   "id": "https://malikhouni.github.io/persoProjects/PWA-CodeAlpha-V2/index.html",
