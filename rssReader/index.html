@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>RSS Example</title>
+
+  </head>
+  <body>
+    <!-- ⚠ Only works for website allowing CORS requests -->
+
+<main id="feed">
+  <a href="https://dev.to/geekgalgroks/building-an-rss-reader-in-javascript-1ep0">
+    <h1>Jenn's Glorious RSS Reader</h1>
+  </a>
+</main>
+
+<script>
+  var url="https://robohub.org/feed/?cat=-473";
+  fetch(url)
+  .then((response) => response.text())
+  .then((str) => new window.DOMParser().parseFromString(str, "text/xml"))
+  .then((data) => {
+    const items = data.querySelectorAll("item");
+    let html = ``;
+    html += `<h2>${data.querySelector("title").innerHTML}</h2>`;
+    html += `<p>${data.querySelector("description").innerHTML}</p>`;
+    html += `<div class="feeds">`;
+    items.forEach((el) => {
+      html += `
+        <article>
+          <h3>
+            <a href="${
+              el.querySelector("link").innerHTML
+            }" target="_blank" rel="noopener">
+              ${el.querySelector("title").innerHTML}
+            </a>
+          </h3>
+        </article>
+      `;
+    });
+    html += `</div>`;
+    document.getElementById("feed").insertAdjacentHTML("beforeend", html);
+  });
+</script>
+  </body>
+</html>
