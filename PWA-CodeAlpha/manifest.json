@@ -33,7 +33,7 @@
 	  "purpose": "any maskable"
     }],
   "lang": "en-US",
-  "start_url": "index.html",
+  "start_url": "./PWA-CodeAlpha/index.html",
   "display": "standalone",
   "background_color": "white",
   "theme_color": "white"
