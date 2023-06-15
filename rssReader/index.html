@@ -14,7 +14,7 @@
 </main>
 
 <script>
-  var url="https://corsproxy.io/?https://robohub.org/feed/?cat=-473";
+  const url = 'https://corsproxy.io/?' + encodeURIComponent('https://robohub.org/feed/?cat=-473');
   fetch(url)
   .then((response) => response.text())
   .then((str) => new window.DOMParser().parseFromString(str, "text/xml"))
