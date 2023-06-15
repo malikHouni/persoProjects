@@ -1,0 +1,17 @@
+body {
+  padding-top: 5rem;
+  background-color:#ecece9;
+}
+.starter-template {
+  padding: 1.5em 0 3em 0;
+  text-align: center;
+}
+
+#listOfArticles{}
+.articleContent{}
+.articleHeader a{}
+
+span.b {
+  display: inline-block;
+  margin:0;padding:0;
+}
